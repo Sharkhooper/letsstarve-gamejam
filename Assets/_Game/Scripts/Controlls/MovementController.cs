@@ -16,8 +16,7 @@ public class MovementController : MonoBehaviour
     void Update() {
         if(! Input.GetMouseButton(0)) return;
         
-        
-        if(EventSystem.current.IsPointerOverGameObject()) return;
+        if(EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
         
             
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
