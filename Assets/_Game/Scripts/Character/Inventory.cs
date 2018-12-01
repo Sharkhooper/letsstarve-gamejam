@@ -24,6 +24,7 @@ public sealed class Inventory : ScriptableObject {
 
 	public void AddItem(FoodItem item, int amount = 1) {
 		Debug.Assert(amount > 0, $"Amount to add to FoodItem {item.name} should be larger than 0, but got {amount}");
+		Debug.Assert(amount < int.MaxValue, $"Amount to add to FoodItem {item.name} should be larger than 0, but got {amount}");
 
 		AddItemIfMissing(item);
 		foodItems[item] += amount;
@@ -33,12 +34,14 @@ public sealed class Inventory : ScriptableObject {
 		foodItems.Clear();
 	}
 
-	public void RemoveItem(FoodItem item, int amount = 1) {
-		Debug.Assert(amount > 0, $"Amount to subtract from FoodItem {item.name} should be larger than 0, but got {amount}");
-
+	public bool RemoveItem(FoodItem item, int amount = 1) {
 		AddItemIfMissing(item);
-		foodItems[item] -= amount;
+		if (foodItems[item] < amount) return false;
+		
+		Debug.Assert(foodItems[item] > amount, $"After subtracting {amount} from {item.name} would have a negative amount {foodItems[item]} left");
+		
+		foodItems[item] = Mathf.Max(foodItems[item] - amount, 0);
 
-		Debug.Assert(foodItems[item] >= 0, $"After subtacting {amount} from {item.name} has a negative amount {foodItems[item]} left");
+		return true;
 	}
 }

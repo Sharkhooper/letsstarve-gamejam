@@ -6,14 +6,14 @@ public class HealthComponent : MonoBehaviour, IHitTarget
 {
     [SerializeField] private int health = 100;
 
-    private int maxHealth;
+    private int maxHealth = 100;
 
     public event DamageHandler OnDamageTaken;
     public event DamageHandler OnDeath;
 
     private void Awake()
     {
-        maxHealth = health;
+        // maxHealth = health;
     }
 
     public void Damage(int damage)
@@ -26,7 +26,7 @@ public class HealthComponent : MonoBehaviour, IHitTarget
         }
     }
 
-    public float HealthPercentage => (float) maxHealth / health;
+    public float HealthPercentage => (float) health / maxHealth;
 
     public int Health => health;
 
