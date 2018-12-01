@@ -7,7 +7,7 @@ using UnityEngine.AI;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class RangeEnemy : MonoBehaviour
+public class StupidBehaviour : MonoBehaviour
 {
     [SerializeField] private float detectionRange = 10f;
     [SerializeField] private float attackRange = 8f;
