@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 8086303488204345905}
   - component: {fileID: 2557374546263736616}
   - component: {fileID: 86998603776589388}
+  - component: {fileID: 545338481464255284}
   m_Layer: 10
   m_Name: Character
   m_TagString: Untagged
@@ -148,6 +149,22 @@ MonoBehaviour:
   saturation: 75
   maxSaturation: 100
   saturationDecay: 1
+--- !u!114 &545338481464255284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607684069053245702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d71ac96002e4944b9bacb570f048c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets: {fileID: 11400000, guid: 64a51c6dc53e42044bde4c21c8cdaf84, type: 2}
+  range: 1.5
+  attackSpeed: 2
+  damage: 50
 --- !u!1 &1607684069214210018
 GameObject:
   m_ObjectHideFlags: 0

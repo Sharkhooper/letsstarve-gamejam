@@ -111,7 +111,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6862818969203239255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 8d7f559c8f4ac4c469bd1e7a8cab1e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -127,7 +126,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6862818969203239255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 2407fafd63f30de409cd17bec1740aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -141,11 +139,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6862818969203239255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 8558bc68304472e4494ed189b01eeaa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
+  enemyList: {fileID: 11400000, guid: 64a51c6dc53e42044bde4c21c8cdaf84, type: 2}
 --- !u!1 &6862818969221804259
 GameObject:
   m_ObjectHideFlags: 0
