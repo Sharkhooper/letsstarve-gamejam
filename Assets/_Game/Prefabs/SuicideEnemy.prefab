@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 6862818969203239248}
   - component: {fileID: 6102077968645948918}
   - component: {fileID: 7787610752197829535}
+  - component: {fileID: 469796253582672502}
   m_Layer: 11
   m_Name: SuicideEnemy
   m_TagString: Untagged
@@ -144,6 +145,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 50
   enemyList: {fileID: 11400000, guid: 64a51c6dc53e42044bde4c21c8cdaf84, type: 2}
+--- !u!114 &469796253582672502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6862818969203239255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &6862818969221804259
 GameObject:
   m_ObjectHideFlags: 0

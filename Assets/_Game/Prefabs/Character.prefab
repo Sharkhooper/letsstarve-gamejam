@@ -134,7 +134,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1432094264707425004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: d4eaa9a90dbce9f44baacbfd7fa36a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -201,6 +200,8 @@ GameObject:
   - component: {fileID: 545338481464255284}
   - component: {fileID: 6409869906848641823}
   - component: {fileID: 9064338060375558842}
+  - component: {fileID: 2140157859}
+  - component: {fileID: 591246875860027059}
   m_Layer: 10
   m_Name: Character
   m_TagString: Untagged
@@ -276,20 +277,6 @@ MonoBehaviour:
   healthComponent: {fileID: 0}
   foodComponent: {fileID: 0}
   navMeshComponent: {fileID: 0}
---- !u!114 &2140157859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607684069053245702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
-  m_Script: {fileID: 11500000, guid: 2407fafd63f30de409cd17bec1740aa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
   bloodParticleSystem: {fileID: 9106912136083028730, guid: f9fab8a2520ad5f4fa5eb0f288c1d07b,
     type: 3}
 --- !u!114 &86998603776589388
@@ -425,10 +412,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607684069053245702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 32e1827ada289db4bb10d50fc5a4cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2140157859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607684069053245702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2407fafd63f30de409cd17bec1740aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &591246875860027059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607684069053245702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &1607684069214210018
 GameObject:
   m_ObjectHideFlags: 0
