@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PickUp : MonoBehaviour
 {
-    void OnTriggerEntered(Collider other)
+
+    [SerializeField] private Inventory inventory;
+
+    [SerializeField] private FoodItem itemType;
+    void OnTriggerEnter(Collider other)
     {
-        this.gameObject.SetActive(false);
+        Debug.Log(other);
+        inventory.AddItem(itemType, 1);
+        Destroy(this.gameObject);
     }
 }
