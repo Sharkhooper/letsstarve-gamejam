@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b7b2193927c4f29b2c100cf98e495eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saturation: 0
+  saturation: 75
   maxSaturation: 100
   saturationDecay: 1
 --- !u!1 &1607684069214210018

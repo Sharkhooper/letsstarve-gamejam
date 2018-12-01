@@ -7,11 +7,16 @@ public class PartyFoodPanel : MonoBehaviour {
     public GameObjectList partyList;
 
     void Start() {
-        for (var i = 0; i < partyList.Count; i++) {
+        int i = 0;
+        for (; i < partyList.Count; ++i) {
             var go = transform.childCount <= i ? Instantiate(prefabSegment, this.transform) : transform.GetChild(i).gameObject;
             
             var segment = go.GetComponent<PartyFoodUISegment>();
             segment.partyMember = partyList[i].GetComponent<CharacterActor>();    
+        }
+
+        for (; i < transform.childCount; ++i) {
+            transform.GetChild(i).gameObject.SetActive(false);
         }
     }
     
