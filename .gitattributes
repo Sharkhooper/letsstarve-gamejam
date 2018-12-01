@@ -56,3 +56,5 @@
 *.rns filter=lfs diff=lfs merge=lfs
 *.reason filter=lfs diff=lfs merge=lfs
 *.lxo filter=lfs diff=lfs merge=lfs
+
+Assets/_Game/Scripts/Utilities/GameLayer.cs text eol=lf

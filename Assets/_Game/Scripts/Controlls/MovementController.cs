@@ -13,7 +13,7 @@ public class MovementController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        if(! Input.GetMouseButtonDown(0)) return;
+        if(! Input.GetMouseButton(0)) return;
         
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         p.Raycast(ray, out float f);
