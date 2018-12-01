@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 3
   attackRange: 2
+  attackSpeed: 1
   re: {fileID: 507947362}
 --- !u!195 &489320685
 NavMeshAgent:

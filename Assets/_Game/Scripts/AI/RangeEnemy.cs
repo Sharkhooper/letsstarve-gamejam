@@ -9,15 +9,18 @@ public class RangeEnemy : MonoBehaviour
 {
     [SerializeField] private float detectionRange = 10f;
     [SerializeField] private float attackRange = 8f;
+    [SerializeField] private float attackSpeed = 1f;
 
     public MeshRenderer re;
 
     private NavMeshAgent agent;
+    private float cooldown;
     private const int playerLayer = 0;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        cooldown = attackSpeed;
     }
 
     void Update()
@@ -37,6 +40,8 @@ public class RangeEnemy : MonoBehaviour
                 MoveTo(detected.transform);
             }
         }
+
+        cooldown -= Time.deltaTime;
     }
 
     private void MoveTo(Transform target)
@@ -46,7 +51,11 @@ public class RangeEnemy : MonoBehaviour
 
     private void Attack(Transform target)
     {
-        re.material.color = Color.blue;
+        if (cooldown <= 0)
+        {
+            re.material.color = Color.blue;
+            cooldown = attackSpeed;
+        }
     }
 
     private void OnDrawGizmosSelected()
