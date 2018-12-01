@@ -27,6 +27,21 @@ public class CharacterActor : MonoBehaviour {
 		healthComponent.OnDamageTaken += _ => OnDamage();
 	}
 
+	// TODO: Rotation
+
+	public float theta;
+	private Vector3 lastPos;
+
+	public Vector3 Forward => Quaternion.Euler(0, -theta, 0) * Vector3.right;
+
+	private void Update() {
+		Debug.DrawLine(transform.position, transform.position + Forward, Color.green);
+		if ((lastPos - transform.position).sqrMagnitude < 0.01f) return;
+		theta = -Vector3.SignedAngle(Vector3.right, transform.position - lastPos, Vector3.up);
+		if (theta < 0) theta += 360.0f;
+		lastPos = transform.position;
+	}
+
 	[Button]
 	private void OnDamage() {
 		GameObject blood = Instantiate(bloodParticleSystem, transform);
