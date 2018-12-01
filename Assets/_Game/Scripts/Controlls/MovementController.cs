@@ -23,6 +23,7 @@ public class MovementController : MonoBehaviour
         p.Raycast(ray, out float f);
 
         navMeshAgent.SetDestination(ray.GetPoint(f));
+        
     }
 
     private void OnDrawGizmos() {
