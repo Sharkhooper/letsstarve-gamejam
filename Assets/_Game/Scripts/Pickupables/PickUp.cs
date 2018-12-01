@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PickUp : MonoBehaviour
 {
-    void OnTriggerEntered(Collider other)
+    void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other);
         this.gameObject.SetActive(false);
     }
 }
