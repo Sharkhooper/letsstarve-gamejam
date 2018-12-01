@@ -1,3 +1,4 @@
+using UnityAtoms;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -5,14 +6,18 @@ using UnityEngine.AI;
 public abstract class StupidActor : MonoBehaviour
 {
     [SerializeField] protected int damage = 50;
+	[SerializeField] private GameObjectList enemyList;
 
     protected StupidBehaviour behaviour;
     protected MeshRenderer renderer;
     protected HealthComponent health;
 
-    protected void Awake()
+	protected void OnEnable() { enemyList.Add(gameObject); }
+	protected void OnDisable() { enemyList.Remove(gameObject); }
+
+	protected void Awake()
     {
-        behaviour = GetComponent<StupidBehaviour>();
+		behaviour = GetComponent<StupidBehaviour>();
         renderer = transform.GetComponentInChildren<MeshRenderer>();
         health = transform.GetComponent<HealthComponent>();
 

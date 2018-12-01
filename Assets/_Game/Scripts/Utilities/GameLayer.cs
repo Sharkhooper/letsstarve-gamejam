@@ -25,6 +25,8 @@ public static class GameLayer {
     public const int UIMask = 1 << 5;
     public const int Walkable = 8;
     public const int WalkableMask = 1 << 8;
+    public const int Pickupable = 9;
+    public const int PickupableMask = 1 << 9;
     public const int Player = 10;
     public const int PlayerMask = 1 << 10;
     public const int Enemy = 11;
