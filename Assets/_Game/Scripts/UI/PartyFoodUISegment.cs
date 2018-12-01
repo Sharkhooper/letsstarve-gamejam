@@ -18,7 +18,7 @@ public class PartyFoodUISegment : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        healthBar.fillAmount = partyMember.health;
-        foodBar.fillAmount = partyMember.food;
+        healthBar.fillAmount = partyMember.healthComponent.HealthPercentage;
+        foodBar.fillAmount = partyMember.foodComponent.SaturationPercent;
     }
 }
