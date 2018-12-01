@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33d452f95dc4ff4f9e3721276a8b7a5, type: 3}
   m_Name: DraftingCompasses
   m_EditorClassIdentifier: 
-  damageValue: 0
+  damageValue: 12
   rangeValue: 1
   isRangedValue: 0
