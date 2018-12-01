@@ -34,7 +34,7 @@ public static class EditorVariablesCodeGen {
 	[MenuItem("Tools/Utils/GameTags and Layers to Code")]
 	private static void GenerateCodeFiles() {
 		SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
-		const string WRITE_PATH = "Assets/Scripts/Utilities/GameLayer.cs";
+		const string WRITE_PATH = "Assets/_Game/Scripts/Utilities/GameLayer.cs";
 		const string CLASS_TEMPLATE = "public static class {CLASS_NAME} { \n\n{CLASS_BODY} }\n";
 		const string VARIABLE_TEMPLATE = "    public const {TYPE} {NAME} = {VALUE};\n";
 
