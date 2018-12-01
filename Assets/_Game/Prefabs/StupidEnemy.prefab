@@ -55,8 +55,10 @@ GameObject:
   - component: {fileID: 6862818969203239250}
   - component: {fileID: 6862818969203239249}
   - component: {fileID: 6862818969203239248}
+  - component: {fileID: 6102077968645948918}
+  - component: {fileID: 7787610752197829535}
   m_Layer: 11
-  m_Name: StupidEnemey
+  m_Name: StupidEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,6 +119,33 @@ MonoBehaviour:
   attackRange: 2
   attackSpeed: 1
   damage: 2
+--- !u!114 &6102077968645948918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6862818969203239255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 2407fafd63f30de409cd17bec1740aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &7787610752197829535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6862818969203239255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 8558bc68304472e4494ed189b01eeaa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6862818969221804259
 GameObject:
   m_ObjectHideFlags: 0
