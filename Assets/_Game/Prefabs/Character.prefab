@@ -289,6 +289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  bloodParticleSystem: {fileID: 9106912136083028730, guid: f9fab8a2520ad5f4fa5eb0f288c1d07b,
+    type: 3}
 --- !u!114 &86998603776589388
 MonoBehaviour:
   m_ObjectHideFlags: 0
