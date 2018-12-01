@@ -14,5 +14,5 @@ MonoBehaviour:
   m_Name: BroomGear
   m_EditorClassIdentifier: 
   damageValue: 0
-  rangeValue: 0
+  rangeValue: 3
   isRangedValue: 0

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_Name: CokeBottleGear
   m_EditorClassIdentifier: 
   damageValue: 0
-  rangeValue: 0
-  isRangedValue: 0
+  rangeValue: 5
+  isRangedValue: 1

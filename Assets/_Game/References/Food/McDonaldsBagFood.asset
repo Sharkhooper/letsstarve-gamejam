@@ -11,6 +11,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: b466f43cc4728b5478dc87f7c3e98e29, type: 3}
-  m_Name: McDonalds
+  m_Name: McDonaldsBagFood
   m_EditorClassIdentifier: 
-  value: 0
+  value: 50

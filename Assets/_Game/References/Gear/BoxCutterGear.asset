@@ -11,8 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: c33d452f95dc4ff4f9e3721276a8b7a5, type: 3}
-  m_Name: New Gear Item
+  m_Name: BoxCutterGear
   m_EditorClassIdentifier: 
   damageValue: 0
-  rangeValue: 0
+  rangeValue: 1
   isRangedValue: 0

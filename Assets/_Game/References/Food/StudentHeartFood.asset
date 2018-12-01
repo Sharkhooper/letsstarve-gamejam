@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b466f43cc4728b5478dc87f7c3e98e29, type: 3}
   m_Name: StudentHeartFood
   m_EditorClassIdentifier: 
-  value: 0
+  value: 100

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_Name: DraftingCompasses
   m_EditorClassIdentifier: 
   damageValue: 0
-  rangeValue: 0
+  rangeValue: 1
   isRangedValue: 0

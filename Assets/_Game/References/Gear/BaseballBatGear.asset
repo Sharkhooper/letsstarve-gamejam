@@ -14,5 +14,5 @@ MonoBehaviour:
   m_Name: BaseballBatGear
   m_EditorClassIdentifier: 
   damageValue: 0
-  rangeValue: 0
+  rangeValue: 2
   isRangedValue: 0
