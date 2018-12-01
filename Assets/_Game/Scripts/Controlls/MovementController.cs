@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class MovementController : MonoBehaviour
 {
     private NavMeshAgent navMeshAgent;
     private Plane p = new Plane(Vector3.up, Vector3.zero);
-    
+
     // Start is called before the first frame update
     void Start() {
         navMeshAgent = GetComponent<NavMeshAgent>(); 
@@ -15,6 +16,10 @@ public class MovementController : MonoBehaviour
     void Update() {
         if(! Input.GetMouseButton(0)) return;
         
+        
+        if(EventSystem.current.IsPointerOverGameObject()) return;
+        
+            
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         p.Raycast(ray, out float f);
 
