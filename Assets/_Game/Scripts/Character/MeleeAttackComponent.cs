@@ -14,10 +14,10 @@ public class MeleeAttackComponent : MonoBehaviour {
 		timer += Time.deltaTime;
 
 		if (timer >= 1.0f / attackSpeed) {
-			foreach (GameObject o in targets.List) {
-				if ((o.transform.position - transform.position).sqrMagnitude > range * range) continue;
-				if (Vector3.Dot(o.transform.position - transform.position, transform.forward) < 0) continue;
-				ExecuteEvents.Execute<IHitTarget>(o, null, (x, y) => x.Damage(damage));
+			for(int i = 0; i < targets.Count; ++i) {
+				if ((targets[i].transform.position - transform.position).sqrMagnitude > range * range) continue;
+				if (Vector3.Dot(targets[i].transform.position - transform.position, transform.forward) < 0) continue;
+				ExecuteEvents.Execute<IHitTarget>(targets[i], null, (x, y) => x.Damage(damage));
 			}
 
 			timer -= 1.0f / attackSpeed;
