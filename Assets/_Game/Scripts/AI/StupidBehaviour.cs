@@ -23,10 +23,6 @@ public class StupidBehaviour : MonoBehaviour
 
     private NavMeshAgent agent;
     private float cooldown;
-    
-    //Debug bool
-    private bool attacking;
-    private bool moveing;
 
     private void Awake()
     {
@@ -36,8 +32,6 @@ public class StupidBehaviour : MonoBehaviour
 
     void Update()
     {
-        attacking = false;
-        moveing = false;
         
         Collider detected = Physics.OverlapSphere(transform.position, detectionRange, GameLayer.PlayerMask)
             .OrderBy(x => Vector3.Distance(x.transform.position, transform.position)).FirstOrDefault();
@@ -64,7 +58,6 @@ public class StupidBehaviour : MonoBehaviour
 
     private void MoveTo(Transform target)
     {
-        moveing = true;
         agent.destination = target.position;
     }
 
@@ -73,9 +66,11 @@ public class StupidBehaviour : MonoBehaviour
         if (cooldown <= 0)
         {
             OnAttack?.Invoke();
-            ExecuteEvents.ExecuteHierarchy<IHitTarget>(target, null, (x, y) => x.Damage(damage));
             cooldown = attackSpeed;
-            attacking = true;
+        }
+        else
+        {
+            OnWait?.Invoke();
         }
     }
 
@@ -86,11 +81,5 @@ public class StupidBehaviour : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
-        
-        if(moveing) Gizmos.color = Color.blue;
-        else if(attacking) Gizmos.color = Color.red;
-        else Gizmos.color = Color.yellow;
-        
-        Gizmos.DrawSphere(transform.position,0.3f);
     }
 }
