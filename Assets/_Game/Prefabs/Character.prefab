@@ -54,7 +54,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1607684069053245697}
   - component: {fileID: 1607684069053245696}
-  - component: {fileID: 1607684069053245703}
   - component: {fileID: 8086303488204345905}
   - component: {fileID: 2557374546263736616}
   - component: {fileID: 86998603776589388}
@@ -90,7 +89,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1607684069053245702}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.05
   m_Speed: 4
   m_Acceleration: 999
   avoidancePriority: 50
@@ -103,19 +102,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1607684069053245703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607684069053245702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
-  m_Script: {fileID: 11500000, guid: d933c94919395804b924ee67c4516f89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8086303488204345905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +111,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607684069053245702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 2407fafd63f30de409cd17bec1740aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -139,13 +124,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607684069053245702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 9ae6c9f50bfd472a89816d1d5e7ae59c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   partyList: {fileID: 11400000, guid: 8a62adf0f47c1614dbea37cd1ba6de17, type: 2}
   healthComponent: {fileID: 0}
   foodComponent: {fileID: 0}
+  navMeshComponent: {fileID: 0}
 --- !u!114 &86998603776589388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +140,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607684069053245702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 4b7b2193927c4f29b2c100cf98e495eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
