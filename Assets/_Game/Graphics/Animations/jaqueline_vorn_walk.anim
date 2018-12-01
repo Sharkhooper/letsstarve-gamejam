@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: jaqueline_hinten_walk
+  m_Name: jaqueline_vorn_walk
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.07561346, y: 0.1071694, z: -0.00000002980232}
+        value: {x: 0.0797786, y: 0.05429358, z: 0.00000006442397}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -29,7 +29,7 @@ AnimationClip:
         outWeight: {x: 0, y: 0, z: 0}
       - serializedVersion: 3
         time: 0.16666667
-        value: {x: -0.047068145, y: 0.098995514, z: -0.00000010803342}
+        value: {x: -0.035691094, y: 0.052030455, z: 0.00000008622934}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -38,7 +38,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.33333334
-        value: {x: 0.07561346, y: 0.1071694, z: -0.00000002980232}
+        value: {x: 0.0703788, y: 0.050142746, z: 0.000000041693617}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -47,7 +47,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0.07561346, y: 0.1071694, z: -0.00000002980232}
+        value: {x: 0.0703788, y: 0.050142746, z: 0.000000041693617}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -56,7 +56,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.6666667
-        value: {x: 0.07561346, y: 0.1071694, z: -0.00000002980232}
+        value: {x: 0.0703788, y: 0.050142746, z: 0.000000041693617}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -66,13 +66,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: jaqueline_hinten/root/bone_1/bone_2/bone_4
+    path: jaqueline_vorn/root/bone_1/bone_2/bone_3
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.049262874, y: -0.06784361, z: -0.000000029802322}
+        value: {x: 0.08406477, y: -0.07444222, z: 0.00000010574687}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -81,7 +81,7 @@ AnimationClip:
         outWeight: {x: 0, y: 0, z: 0}
       - serializedVersion: 3
         time: 0.16666667
-        value: {x: 0.049262874, y: -0.06784361, z: -0.000000029802322}
+        value: {x: -0.032826018, y: -0.058580834, z: 0.00000014397578}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -90,7 +90,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.33333334
-        value: {x: 0.049262874, y: -0.06784361, z: -0.000000029802322}
+        value: {x: -0.032826018, y: -0.058580834, z: 0.00000014397578}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -99,7 +99,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: -0.06767464, y: -0.04689892, z: -0.00000008940697}
+        value: {x: -0.032826018, y: -0.058580834, z: 0.00000014397578}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -108,7 +108,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.6666667
-        value: {x: 0.049262874, y: -0.06784361, z: -0.000000029802322}
+        value: {x: 0.07761485, y: -0.06741834, z: 0.00000014357157}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -118,7 +118,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: jaqueline_hinten/root/bone_1/bone_2/bone_6
+    path: jaqueline_vorn/root/bone_1/bone_2/bone_5
   m_ScaleCurves: []
   m_FloatCurves:
   - curve:
@@ -173,7 +173,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: jaqueline_hinten
+    path: jaqueline_vorn
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -185,21 +185,21 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2835890717
+      path: 455059367
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1191584561
+      path: 4068213394
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1590241713
+      path: 2914832301
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -279,7 +279,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: jaqueline_hinten
+    path: jaqueline_vorn
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -287,7 +287,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.07561346
+        value: 0.0797786
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -296,7 +296,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.16666667
-        value: -0.047068145
+        value: -0.035691094
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -305,7 +305,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: 0.07561346
+        value: 0.0703788
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -314,7 +314,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 0.07561346
+        value: 0.0703788
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -323,7 +323,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.6666667
-        value: 0.07561346
+        value: 0.0703788
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -334,7 +334,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: jaqueline_hinten/root/bone_1/bone_2/bone_4
+    path: jaqueline_vorn/root/bone_1/bone_2/bone_3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -342,7 +342,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.1071694
+        value: 0.05429358
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -351,7 +351,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.16666667
-        value: 0.098995514
+        value: 0.052030455
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -360,7 +360,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: 0.1071694
+        value: 0.050142746
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -369,7 +369,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 0.1071694
+        value: 0.050142746
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -378,7 +378,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.6666667
-        value: 0.1071694
+        value: 0.050142746
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -389,7 +389,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: jaqueline_hinten/root/bone_1/bone_2/bone_4
+    path: jaqueline_vorn/root/bone_1/bone_2/bone_3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -397,7 +397,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.00000002980232
+        value: 0.00000006442397
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -406,7 +406,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.16666667
-        value: -0.00000010803342
+        value: 0.00000008622934
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -415,7 +415,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: -0.00000002980232
+        value: 0.000000041693617
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -424,7 +424,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: -0.00000002980232
+        value: 0.000000041693617
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -433,7 +433,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.6666667
-        value: -0.00000002980232
+        value: 0.000000041693617
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -444,7 +444,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: jaqueline_hinten/root/bone_1/bone_2/bone_4
+    path: jaqueline_vorn/root/bone_1/bone_2/bone_3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -452,7 +452,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.049262874
+        value: 0.08406477
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -461,7 +461,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.16666667
-        value: 0.049262874
+        value: -0.032826018
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -470,7 +470,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: 0.049262874
+        value: -0.032826018
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -479,7 +479,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: -0.06767464
+        value: -0.032826018
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -488,7 +488,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.6666667
-        value: 0.049262874
+        value: 0.07761485
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -499,7 +499,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: jaqueline_hinten/root/bone_1/bone_2/bone_6
+    path: jaqueline_vorn/root/bone_1/bone_2/bone_5
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -507,7 +507,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.06784361
+        value: -0.07444222
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -516,7 +516,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.16666667
-        value: -0.06784361
+        value: -0.058580834
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -525,7 +525,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: -0.06784361
+        value: -0.058580834
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -534,7 +534,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: -0.04689892
+        value: -0.058580834
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -543,7 +543,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.6666667
-        value: -0.06784361
+        value: -0.06741834
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -554,7 +554,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: jaqueline_hinten/root/bone_1/bone_2/bone_6
+    path: jaqueline_vorn/root/bone_1/bone_2/bone_5
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -562,7 +562,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.000000029802322
+        value: 0.00000010574687
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -571,7 +571,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.16666667
-        value: -0.000000029802322
+        value: 0.00000014397578
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -580,7 +580,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: -0.000000029802322
+        value: 0.00000014397578
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -589,7 +589,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: -0.00000008940697
+        value: 0.00000014397578
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -598,7 +598,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.6666667
-        value: -0.000000029802322
+        value: 0.00000014357157
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -609,7 +609,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: jaqueline_hinten/root/bone_1/bone_2/bone_6
+    path: jaqueline_vorn/root/bone_1/bone_2/bone_5
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []
