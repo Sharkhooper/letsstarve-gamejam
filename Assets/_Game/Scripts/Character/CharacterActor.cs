@@ -17,6 +17,8 @@ public class CharacterActor : MonoBehaviour {
     public FoodComponent foodComponent;
 	public NavMeshAgent navMeshComponent;
 
+    [SerializeField] public Inventory inventory;
+
 	public GameObject bloodParticleSystem;
 
     void Start() {

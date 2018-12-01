@@ -30,7 +30,7 @@ public class EatFoodButton : MonoBehaviour, IPointerClickHandler {
         }
         
         
-        if(inventory.RemoveItem(item, 1)){
+        if(inventory.RemoveFood(item, 1)){
             PartyFoodUISegment.SelectedPartyFoodSegment.partyMember.foodComponent.saturation += item.Value;
             var seq = DOTween.Sequence();
             seq.Append(transform.DOScale(0.9f, 0.1f).SetEase(Ease.InCubic));
