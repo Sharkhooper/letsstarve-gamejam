@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -138,7 +138,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 292478403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -223,7 +222,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 545791742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -264,7 +262,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 545791742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -385,13 +382,12 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -614,7 +610,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -669,7 +664,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1144024333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: e5eb80d8e62d9d145bb50fb783c0f731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -1046,6 +1040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1862930705}
   - component: {fileID: 1862930706}
+  - component: {fileID: 1862930707}
   m_Layer: 0
   m_Name: PartyCenter
   m_TagString: Untagged
@@ -1076,11 +1071,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1862930704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: a626a3b5ba354683bf569ad2535e9b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerParty: {fileID: 11400000, guid: 8a62adf0f47c1614dbea37cd1ba6de17, type: 2}
+--- !u!114 &1862930707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862930704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d933c94919395804b924ee67c4516f89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partyList: {fileID: 11400000, guid: 8a62adf0f47c1614dbea37cd1ba6de17, type: 2}
+  formationPadding: 1.5
 --- !u!1 &2084505811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1115,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2084505811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
