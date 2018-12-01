@@ -2,17 +2,15 @@ using UnityEngine;
 
 public class FoodComponent : MonoBehaviour{
     
-    [SerializeField] private int saturation;
+    [SerializeField] public int saturation;
 
     [SerializeField] private int maxSaturation;
 
     [SerializeField] private int saturationDecay;
 
-    public int Saturation => saturation;
-
     public int MaxSaturation => maxSaturation;
 
-    public float SaturationPercent => (float) Saturation / MaxSaturation;
+    public float SaturationPercent => (float) saturation / MaxSaturation;
 
     public int SaturationDecay => saturationDecay;
 

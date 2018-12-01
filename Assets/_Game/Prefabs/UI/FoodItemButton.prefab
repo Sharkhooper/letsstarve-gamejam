@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 2190216465556048406}
   - component: {fileID: 3798362519175542521}
   - component: {fileID: 2052932043328273906}
+  - component: {fileID: 7738181607502667501}
   m_Layer: 5
   m_Name: FoodItemButton
   m_TagString: Untagged
@@ -237,3 +238,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &7738181607502667501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3584284119554650771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 1d3c992d73cd46b09d529d15ac9fe4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: 99f9595aa86a1194888f611ba563f235, type: 2}
+  item: {fileID: 0}
+  itemCountLabel: {fileID: 1018230296634100848}
