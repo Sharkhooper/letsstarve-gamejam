@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SuicideActor : MonoBehaviour
 {
+    [SerializeField] private int damage = 50;
+
     private StupidBehaviour behaviour;
     private MeshRenderer renderer;
     private HealthComponent health;
@@ -27,9 +30,10 @@ public class SuicideActor : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void Attack()
+    private void Attack(GameObject target)
     {
         renderer.material.color = Color.red;
+        ExecuteEvents.ExecuteHierarchy<IHitTarget>(target, null, (x, y) => x.Damage(damage));
         Destroy(gameObject);
     }
 

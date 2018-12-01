@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 
 
 public delegate void AiAction();
+public delegate void AttackAction(GameObject target);
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class StupidBehaviour : MonoBehaviour
@@ -15,9 +16,8 @@ public class StupidBehaviour : MonoBehaviour
     [SerializeField] private float detectionRange = 10f;
     [SerializeField] private float attackRange = 8f;
     [SerializeField] private float attackSpeed = 1f;
-    [SerializeField] private int damage = 2;
 
-    public event AiAction OnAttack;
+    public event AttackAction OnAttack;
     public event AiAction OnMove;
     public event AiAction OnWait;
 
@@ -65,7 +65,7 @@ public class StupidBehaviour : MonoBehaviour
     {
         if (cooldown <= 0)
         {
-            OnAttack?.Invoke();
+            OnAttack?.Invoke(target);
             cooldown = attackSpeed;
         }
         else
