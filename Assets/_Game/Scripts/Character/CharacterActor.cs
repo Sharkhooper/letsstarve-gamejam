@@ -16,6 +16,7 @@ public class CharacterActor : MonoBehaviour {
     public HealthComponent healthComponent;
     public FoodComponent foodComponent;
 	public NavMeshAgent navMeshComponent;
+	public Animator animator;
 
     [SerializeField] public Inventory inventory;
 
@@ -31,15 +32,29 @@ public class CharacterActor : MonoBehaviour {
 
 	// TODO: Rotation
 
-	public float theta;
+	private float theta;
+	public float Theta {
+		get => theta;
+		set {
+			if (value < 0) {
+				value += 360.0f;
+			}
+
+			theta = value;
+		}
+	}
+
 	private Vector3 lastPos;
 
-	public Vector3 Forward => Quaternion.Euler(0, -theta, 0) * Vector3.right;
+	public Vector3 Forward => Quaternion.Euler(0, -Theta, 0) * Vector3.right;
 
 	private void Update() {
+		int animationState = Mathf.FloorToInt((Theta + 405.0f) / 90.0f) - 4;
+		animator.SetInteger("direction", animationState);
+		animator.gameObject.transform.localScale = new Vector3(animationState == 2 ? -1 : 1, 1, 1);
+
 		if ((lastPos - transform.position).sqrMagnitude < 0.01f) return;
-		theta = -Vector3.SignedAngle(Vector3.right, transform.position - lastPos, Vector3.up);
-		if (theta < 0) theta += 360.0f;
+		Theta = -Vector3.SignedAngle(Vector3.right, transform.position - lastPos, Vector3.up);
 		lastPos = transform.position;
 	}
 

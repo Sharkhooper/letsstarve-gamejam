@@ -52,9 +52,9 @@ public class MeleeAttackComponent : MonoBehaviour {
 			if (nearestTarget != null) {
 				GameObject effect = Instantiate(hitEffect, transform);
 				effect.transform.rotation = Quaternion.FromToRotation(Vector3.forward, nearestTarget.transform.position - transform.position);
-			    actor.theta = -Vector3.SignedAngle(Vector3.right, nearestUnavailableTarget.transform.position - transform.position, Vector3.up);
+			    actor.Theta = -Vector3.SignedAngle(Vector3.right, nearestUnavailableTarget.transform.position - transform.position, Vector3.up);
             } else if (nearestUnavailableTarget != null) {
-				actor.theta = -Vector3.SignedAngle(Vector3.right, nearestUnavailableTarget.transform.position - transform.position, Vector3.up);
+				actor.Theta = -Vector3.SignedAngle(Vector3.right, nearestUnavailableTarget.transform.position - transform.position, Vector3.up);
 				timer = 1.0f / attackSpeed;
 			} else {
 				timer = 1.0f / attackSpeed;
