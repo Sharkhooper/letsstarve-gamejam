@@ -6,6 +6,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 
+
+public delegate void AiAction();
+
 [RequireComponent(typeof(NavMeshAgent))]
 public class StupidBehaviour : MonoBehaviour
 {
@@ -14,11 +17,16 @@ public class StupidBehaviour : MonoBehaviour
     [SerializeField] private float attackSpeed = 1f;
     [SerializeField] private int damage = 2;
 
-    public MeshRenderer re;
+    public event AiAction OnAttack;
+    public event AiAction OnMove;
+    public event AiAction OnWait;
 
     private NavMeshAgent agent;
     private float cooldown;
-    private const int playerLayer = 0;
+    
+    //Debug bool
+    private bool attacking;
+    private bool moveing;
 
     private void Awake()
     {
@@ -28,7 +36,9 @@ public class StupidBehaviour : MonoBehaviour
 
     void Update()
     {
-        re.material.color = Color.red;
+        attacking = false;
+        moveing = false;
+        
         Collider detected = Physics.OverlapSphere(transform.position, detectionRange, GameLayer.PlayerMask)
             .OrderBy(x => Vector3.Distance(x.transform.position, transform.position)).FirstOrDefault();
 
@@ -40,8 +50,13 @@ public class StupidBehaviour : MonoBehaviour
             }
             else
             {
+                OnMove?.Invoke();
                 MoveTo(detected.transform);
             }
+        }
+        else
+        {
+            OnWait?.Invoke();
         }
 
         cooldown -= Time.deltaTime;
@@ -49,6 +64,7 @@ public class StupidBehaviour : MonoBehaviour
 
     private void MoveTo(Transform target)
     {
+        moveing = true;
         agent.destination = target.position;
     }
 
@@ -56,18 +72,25 @@ public class StupidBehaviour : MonoBehaviour
     {
         if (cooldown <= 0)
         {
-            re.material.color = Color.blue;
+            OnAttack?.Invoke();
             ExecuteEvents.ExecuteHierarchy<IHitTarget>(target, null, (x, y) => x.Damage(damage));
             cooldown = attackSpeed;
+            attacking = true;
         }
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+        
+        if(moveing) Gizmos.color = Color.blue;
+        else if(attacking) Gizmos.color = Color.red;
+        else Gizmos.color = Color.yellow;
+        
+        Gizmos.DrawSphere(transform.position,0.3f);
     }
 }
