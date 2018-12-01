@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 7406994496493606511}
   - component: {fileID: 7879505670117833417}
   - component: {fileID: 3928481638460707652}
+  - component: {fileID: 4916844016991986878}
   m_Layer: 11
   m_Name: RangeEnemy
   m_TagString: Untagged
@@ -144,6 +145,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   enemyList: {fileID: 11400000, guid: 64a51c6dc53e42044bde4c21c8cdaf84, type: 2}
+--- !u!114 &4916844016991986878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406994496493606504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &7406994496542117852
 GameObject:
   m_ObjectHideFlags: 0
