@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class RangeEnemy : MonoBehaviour
@@ -10,6 +12,7 @@ public class RangeEnemy : MonoBehaviour
     [SerializeField] private float detectionRange = 10f;
     [SerializeField] private float attackRange = 8f;
     [SerializeField] private float attackSpeed = 1f;
+    [SerializeField] private int damage = 2;
 
     public MeshRenderer re;
 
@@ -33,7 +36,7 @@ public class RangeEnemy : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, detected.transform.position) <= attackRange)
             {
-                Attack(detected.transform);
+                Attack(detected.gameObject);
             }
             else
             {
@@ -49,11 +52,12 @@ public class RangeEnemy : MonoBehaviour
         agent.destination = target.position;
     }
 
-    private void Attack(Transform target)
+    private void Attack(GameObject target)
     {
         if (cooldown <= 0)
         {
             re.material.color = Color.blue;
+            ExecuteEvents.ExecuteHierarchy<IHitTarget>(target, null, (x, y) => x.Damage(damage));
             cooldown = attackSpeed;
         }
     }
