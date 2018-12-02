@@ -57,7 +57,7 @@ public sealed class Inventory : ScriptableObject
         return true;
     }
 
-    public void equipGear(CharacterActor character, GearItem item)
+    public void EquipGear(CharacterActor character, GearItem item)
     {
         if (equippedItems.ContainsKey(character))
         {

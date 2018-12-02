@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33d452f95dc4ff4f9e3721276a8b7a5, type: 3}
   m_Name: CokeBottleGear
   m_EditorClassIdentifier: 
-  damageValue: 8
-  rangeValue: 5
-  isRangedValue: 1
+  gear:
+    damageValue: 0
+    rangeValue: 0
+    isRangedValue: 0
+  graphic: {fileID: 21300000, guid: a0f32637dcbe03940aa53a5181573557, type: 3}

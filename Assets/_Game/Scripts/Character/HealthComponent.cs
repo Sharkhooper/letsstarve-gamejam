@@ -26,6 +26,7 @@ public class HealthComponent : MonoBehaviour, IHitTarget
         {
             OnDeath?.Invoke(damage);
             DeathEvent?.Raise();
+            
             this.gameObject.SetActive(false);
         }
     }

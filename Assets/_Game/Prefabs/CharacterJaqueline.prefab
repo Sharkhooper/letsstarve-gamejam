@@ -1355,6 +1355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targets: {fileID: 11400000, guid: 64a51c6dc53e42044bde4c21c8cdaf84, type: 2}
+  inventory: {fileID: 11400000, guid: 99f9595aa86a1194888f611ba563f235, type: 2}
   useConstantStats: 1
   item: {fileID: 0}
   constantStats:

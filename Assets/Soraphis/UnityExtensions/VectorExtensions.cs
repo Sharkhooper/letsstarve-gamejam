@@ -15,6 +15,8 @@ namespace Soraphis {
         public static Vector3Int xy_(this Vector2Int v) {    return new Vector3Int(v.x, v.y, 0);    }
      
         
+        public static Vector3 WithY(this Vector3 v, float y) {    return new Vector3(v.x, y, v.z);    }
+        
         public static bool inRange(this Vector3 a, Vector3 b, float range) {    return Vector3.SqrMagnitude(b - a) < range*range;    }
     }
 }

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33d452f95dc4ff4f9e3721276a8b7a5, type: 3}
   m_Name: BroomGear
   m_EditorClassIdentifier: 
-  damageValue: 12
-  rangeValue: 3
-  isRangedValue: 0
+  gear:
+    damageValue: 35
+    rangeValue: 1.5
+    isRangedValue: 0
+  graphic: {fileID: 21300000, guid: 070728752c8502849b06c1c680bd6809, type: 3}

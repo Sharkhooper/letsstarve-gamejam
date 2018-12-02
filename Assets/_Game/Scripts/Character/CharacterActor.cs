@@ -2,6 +2,7 @@ using NaughtyAttributes;
 using UnityAtoms;
 using UnityEngine;
 using UnityEngine.AI;
+using _Game.Scripts.Controlls;
 
 [RequireComponent(typeof(HealthComponent))]
 [RequireComponent(typeof(FoodComponent))]
@@ -16,9 +17,10 @@ public class CharacterActor : MonoBehaviour {
     [HideInInspector] public HealthComponent healthComponent;
     [HideInInspector] public FoodComponent foodComponent;
 	[HideInInspector] public NavMeshAgent navMeshComponent;
+	[HideInInspector] public AttackController attackController;
 	
 	public Animator animator;
-    [SerializeField] public Inventory inventory;
+    [SerializeField] public Inventory inventory; // fixme: has nothing to do here ... 
 
 	public GameObject bloodParticleSystem;
 
@@ -26,7 +28,8 @@ public class CharacterActor : MonoBehaviour {
         healthComponent = GetComponent<HealthComponent>();
         foodComponent = GetComponent<FoodComponent>();
 		navMeshComponent = GetComponent<NavMeshAgent>();
-
+	    attackController = GetComponentInChildren<AttackController>();
+	    
 		healthComponent.OnDamageTaken += _ => OnDamage();
 	}
 

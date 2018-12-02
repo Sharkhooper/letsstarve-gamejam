@@ -12,4 +12,6 @@ public class GearItem : ScriptableObject {
     public float RangeValue => gear.rangeValue;
 
     public bool IsRangedValue => gear.isRangedValue;
+
+    public Sprite graphic;
 }

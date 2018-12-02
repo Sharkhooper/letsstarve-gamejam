@@ -3,6 +3,7 @@ using DefaultNamespace;
 using NaughtyAttributes;
 using UnityAtoms;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Controlls {
     public class AttackController : MonoBehaviour{
@@ -10,19 +11,39 @@ namespace _Game.Scripts.Controlls {
         
         public GameObjectList targets; // PlayerParty for enemies, Enemies for the player characters
 
-        public bool useConstantStats;
-        public bool useConstantStatsNot() => !useConstantStats;
-        [ShowIf(nameof(useConstantStatsNot))][SerializeField] private GearItem item;
-        [ShowIf(nameof(useConstantStats))][SerializeField] private Gear constantStats;
+        public Inventory inventory;
+        [SerializeField] private GearItem item;
+        [FormerlySerializedAs("constantStats")] [SerializeField] private Gear baseStats;
 
-        public Gear gear() => useConstantStats ? constantStats : item.Gear;
+        public Gear gear() => item == null ? baseStats : item.Gear;
 
         private GameObject preferedTarget = null;
+        private CharacterActor characterActor;
+        
+        
         
         private void Start() {
+            characterActor = GetComponentInParent<CharacterActor>();
             animator = GetComponent<Animator>();
         }
 
+        public GearItem GetGear(GearItem item) {
+            if (! inventory.EquippedItems.TryGetValue(characterActor, out GearItem current)) {
+                current = null;
+            }
+
+            var stats = this.item != null ? current.Gear : baseStats;
+
+            if (stats.damageValue < item.DamageValue) { // fixme: do better...
+                inventory.EquipGear(characterActor, item);
+                this.item = item;
+                return current;
+            }
+            
+            // todo: animator, set attack animation speed based on weapon speed
+            return item; // not interested ... 
+        }
+        
         private void Update() {
             preferedTarget = targets.List.FirstOrDefault(IsInRange);
             
@@ -42,6 +63,8 @@ namespace _Game.Scripts.Controlls {
             
             if (gear().isRangedValue) {
                 // TODO: spawn projectile on ranged attack instead of instant damage... 
+             
+                
                 
                 return;
             }

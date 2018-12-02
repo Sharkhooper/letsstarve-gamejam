@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33d452f95dc4ff4f9e3721276a8b7a5, type: 3}
   m_Name: BaseballBatGear
   m_EditorClassIdentifier: 
-  damageValue: 20
-  rangeValue: 2
-  isRangedValue: 0
+  gear:
+    damageValue: 0
+    rangeValue: 0
+    isRangedValue: 0
+  graphic: {fileID: 21300000, guid: d45d092188289854aa9d9be7a16c70b9, type: 3}
