@@ -1,7 +1,9 @@
-﻿using UnityAtoms;
+﻿using System;
+using UnityAtoms;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+[Obsolete("Use Attack Controller instead")]
 public class MeleeAttackComponent : MonoBehaviour {
 	public GameObjectList targets;
 	
@@ -28,7 +30,13 @@ public class MeleeAttackComponent : MonoBehaviour {
 		actor = GetComponent<CharacterActor>();
 	}
 
+	
+	/// <summary>
+	/// THIS STUFF IS OBSOLETE
+	/// </summary>
 	private void Update() {
+		
+		/*
 		timer += Time.deltaTime;
 
 		if (timer >= 1.0f / attackSpeed) {
@@ -60,6 +68,7 @@ public class MeleeAttackComponent : MonoBehaviour {
 				timer = 1.0f / attackSpeed;
 			}
 		}
+		*/
 	}
 
     void attackMelee()

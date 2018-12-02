@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpGear : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class PickUpGear : MonoBehaviour{
+    
+    [SerializeField] private Inventory inventory;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private GearItem itemType;
+    void OnTriggerEnter(Collider other)
     {
-        
+     
     }
+    
 }

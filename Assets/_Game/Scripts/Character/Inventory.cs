@@ -50,7 +50,7 @@ public sealed class Inventory : ScriptableObject
         AddFoodIfMissing(item);
         if (foodItems[item] < amount) return false;
 
-        Debug.Assert(foodItems[item] > amount, $"After subtracting {amount} from {item.name} would have a negative amount {foodItems[item]} left");
+        Debug.Assert(foodItems[item] >= amount, $"After subtracting {amount} from {item.name} would have a negative amount {foodItems[item]} left");
 
         foodItems[item] = Mathf.Max(foodItems[item] - amount, 0);
 

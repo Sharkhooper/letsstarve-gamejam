@@ -34,7 +34,6 @@ public class PartyFoodUISegment : MonoBehaviour, IPointerClickHandler {
        // if(! this.gameObject.activeSelf) return; // maybe redundant...
 
         if (valueChanged(foodBar.fillAmount, lastSaturation)){
-            Debug.Log("pulsing");
             
             foodBar.transform.parent.
                 DOScale(0.9f, 0.05f)
@@ -45,7 +44,6 @@ public class PartyFoodUISegment : MonoBehaviour, IPointerClickHandler {
         }
         
         if (valueChanged(healthBar.fillAmount, lastHealth, 0.01f)){
-            Debug.Log("pulsing");
             
             healthBar.transform.parent.
                 DOScale(0.9f, 0.05f)

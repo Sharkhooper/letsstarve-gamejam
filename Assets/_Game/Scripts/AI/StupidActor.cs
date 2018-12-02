@@ -12,16 +12,20 @@ public abstract class StupidActor : MonoBehaviour
     protected MeshRenderer renderer;
     protected HealthComponent health;
 	protected Animator anim;
+	protected NavMeshAgent navMeshAgent;
 
 	protected void OnEnable() { enemyList.Add(gameObject); }
 	protected void OnDisable() { enemyList.Remove(gameObject); }
 
+	public bool isSvenja = false; // svenjas "seite" sprite is right-to-left instead left-to-right
+	
 	protected void Awake()
     {
 		behaviour = GetComponent<StupidBehaviour>();
         renderer = transform.GetComponentInChildren<MeshRenderer>();
         health = transform.GetComponent<HealthComponent>();
 	    anim = transform.GetComponentInChildren<Animator>();
+	    navMeshAgent = transform.GetComponentInChildren<NavMeshAgent>();
 
         health.OnDeath += Death;
         health.OnDamageTaken += DamageTaken;
@@ -53,10 +57,16 @@ public abstract class StupidActor : MonoBehaviour
 		if (anim != null)
 		{
 			int animationState = Mathf.FloorToInt((Theta + 405.0f) / 90.0f) - 4;
-			anim.SetInteger("direction", animationState);
-			anim.gameObject.transform.localScale = new Vector3(animationState == 2 ? -1 : 1, 1, 1);
+			anim.SetFloat("direction", animationState);
 
-			if ((lastPos - transform.position).sqrMagnitude < 0.01f) return;
+			int factor = isSvenja ? -1 : 1;
+			anim.gameObject.transform.localScale = new Vector3(factor * (animationState == 2 ? -1 : 1), 1, 1);
+
+			var walking = (navMeshAgent.destination - transform.position).sqrMagnitude < 0.01f;
+		
+			anim.SetBool("walking", !walking);
+			
+			if (walking) return;
 			Theta = -Vector3.SignedAngle(Vector3.right, transform.position - lastPos, Vector3.up);
 			lastPos = transform.position;
 		}

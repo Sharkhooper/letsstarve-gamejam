@@ -25,7 +25,7 @@ public class MeleeActor : StupidActor
 
     protected override void Idle()
     {
-        Debug.Log("Idel");
+//        Debug.Log("Idel");
         anim.SetBool("walking",false);
     }
 }

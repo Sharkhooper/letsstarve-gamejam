@@ -11,6 +11,8 @@ public class HealthComponent : MonoBehaviour, IHitTarget
     public event DamageHandler OnDamageTaken;
     public event DamageHandler OnDeath;
 
+    public UnityAtoms.VoidEvent DeathEvent;
+    
     private void Awake()
     {
         // maxHealth = health;
@@ -23,6 +25,8 @@ public class HealthComponent : MonoBehaviour, IHitTarget
         if (health <= 0)
         {
             OnDeath?.Invoke(damage);
+            DeathEvent?.Raise();
+            this.gameObject.SetActive(false);
         }
     }
 

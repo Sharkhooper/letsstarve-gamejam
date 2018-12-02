@@ -1,17 +1,15 @@
-﻿using UnityEngine;
+﻿using UnityAtoms;
+using UnityEngine;
 
 [CreateAssetMenu]
-public class GearItem : ScriptableObject
-{
-    [SerializeField] private int damageValue;
+public class GearItem : ScriptableObject {
+    [SerializeField] private Gear gear;
 
-    [SerializeField] private int rangeValue;
+    public Gear Gear => gear; 
 
-    [SerializeField] private bool isRangedValue;
+    public int DamageValue => gear.damageValue;
 
-    public int DamageValue => damageValue;
+    public float RangeValue => gear.rangeValue;
 
-    public int RangeValue => rangeValue;
-
-    public bool IsRangedValue => isRangedValue;
+    public bool IsRangedValue => gear.isRangedValue;
 }
