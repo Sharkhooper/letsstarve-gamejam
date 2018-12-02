@@ -133,6 +133,8 @@ MonoBehaviour:
   healthComponent: {fileID: 0}
   foodComponent: {fileID: 0}
   navMeshComponent: {fileID: 0}
+  animator: {fileID: 4784725513901904095}
+  inventory: {fileID: 11400000, guid: 99f9595aa86a1194888f611ba563f235, type: 2}
   bloodParticleSystem: {fileID: 9106912136083028730, guid: f9fab8a2520ad5f4fa5eb0f288c1d07b,
     type: 3}
 --- !u!114 &86998603776589388

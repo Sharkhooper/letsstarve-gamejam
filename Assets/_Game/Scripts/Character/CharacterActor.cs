@@ -13,11 +13,11 @@ public class CharacterActor : MonoBehaviour {
     private void OnEnable() { partyList.Add(gameObject); }
     private void OnDisable() { partyList.Remove(gameObject); }
     
-    public HealthComponent healthComponent;
-    public FoodComponent foodComponent;
-	public NavMeshAgent navMeshComponent;
+    [HideInInspector] public HealthComponent healthComponent;
+    [HideInInspector] public FoodComponent foodComponent;
+	[HideInInspector] public NavMeshAgent navMeshComponent;
+	
 	public Animator animator;
-
     [SerializeField] public Inventory inventory;
 
 	public GameObject bloodParticleSystem;
@@ -50,10 +50,13 @@ public class CharacterActor : MonoBehaviour {
 
 	private void Update() {
 		int animationState = Mathf.FloorToInt((Theta + 405.0f) / 90.0f) - 4;
-		animator.SetInteger("direction", animationState);
+		animator.SetFloat("direction", animationState);
 		animator.gameObject.transform.localScale = new Vector3(animationState == 2 ? -1 : 1, 1, 1);
 
-		if ((lastPos - transform.position).sqrMagnitude < 0.01f) return;
+		var walking = (navMeshComponent.destination - transform.position).sqrMagnitude < 0.01f;
+		
+		animator.SetBool("walking", !walking);
+		if (walking) return;
 		Theta = -Vector3.SignedAngle(Vector3.right, transform.position - lastPos, Vector3.up);
 		lastPos = transform.position;
 	}
