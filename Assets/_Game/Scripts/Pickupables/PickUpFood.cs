@@ -11,7 +11,7 @@ public class PickUp : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other);
-        inventory.AddItem(itemType, 1);
+        inventory.AddFood(itemType, 1);
         Destroy(this.gameObject);
     }
 }

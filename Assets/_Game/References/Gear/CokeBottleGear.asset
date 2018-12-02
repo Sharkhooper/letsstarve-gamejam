@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33d452f95dc4ff4f9e3721276a8b7a5, type: 3}
   m_Name: CokeBottleGear
   m_EditorClassIdentifier: 
-  damageValue: 0
+  damageValue: 8
   rangeValue: 5
   isRangedValue: 1

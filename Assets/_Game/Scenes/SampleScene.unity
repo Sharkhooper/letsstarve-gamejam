@@ -5240,6 +5240,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e39f093a7ca1c4a4cadf46d6954c13a1, type: 3}
+--- !u!1 &2069319676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2069319677}
+  m_Layer: 0
+  m_Name: 'Folder: Pickupables'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2069319677
+Transform:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069319676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1868263087}
+  - {fileID: 404619583}
+  - {fileID: 1511951318}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2084505811
 GameObject:
   m_ObjectHideFlags: 0
@@ -5603,6 +5636,7 @@ MonoBehaviour:
   healthComponent: {fileID: 0}
   foodComponent: {fileID: 0}
   navMeshComponent: {fileID: 0}
+  inventory: {fileID: 0}
   bloodParticleSystem: {fileID: 9106912136083028730, guid: f9fab8a2520ad5f4fa5eb0f288c1d07b,
     type: 3}
   theta: 0

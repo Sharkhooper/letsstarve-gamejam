@@ -18,6 +18,8 @@ public class CharacterActor : MonoBehaviour {
 	public NavMeshAgent navMeshComponent;
 	public Animator animator;
 
+    [SerializeField] public Inventory inventory;
+
 	public GameObject bloodParticleSystem;
 
     void Start() {

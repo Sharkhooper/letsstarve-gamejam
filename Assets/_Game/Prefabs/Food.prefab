@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1104906383508524602}
   - component: {fileID: 3920968004346065775}
   m_Layer: 9
-  m_Name: Pickupable
+  m_Name: Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
