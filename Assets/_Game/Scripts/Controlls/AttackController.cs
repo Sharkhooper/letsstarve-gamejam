@@ -1,5 +1,6 @@
 using System.Linq;
 using DefaultNamespace;
+using DG.Tweening;
 using NaughtyAttributes;
 using UnityAtoms;
 using UnityEngine;
@@ -19,8 +20,8 @@ namespace _Game.Scripts.Controlls {
 
         private GameObject preferedTarget = null;
         private CharacterActor characterActor;
-        
-        
+
+        public SpriteRenderer attackProjectile;
         
         private void Start() {
             characterActor = GetComponentInParent<CharacterActor>();
@@ -52,6 +53,7 @@ namespace _Game.Scripts.Controlls {
                 return;
             }
 
+            characterActor.Forward = preferedTarget.transform.position - this.transform.position;
             animator.SetTrigger("attack");
             this.enabled = false;
         }
@@ -63,12 +65,19 @@ namespace _Game.Scripts.Controlls {
             
             if (gear().isRangedValue) {
                 // TODO: spawn projectile on ranged attack instead of instant damage... 
-             
-                
                 
                 return;
             }
+            if(this.item != null){
+            attackProjectile.gameObject.SetActive(true);
+            attackProjectile.sprite = this.item.graphic;
+            attackProjectile.transform.position = this.transform.position + characterActor.Forward;
+            DOTween.To(() => 0f, f => {
+                    attackProjectile.transform.localRotation = Quaternion.Euler(Vector3.forward * f);
+                }, 360 * 3, 0.8f).OnComplete(() => attackProjectile.gameObject.SetActive(false));
             
+            }
+                
             if (preferedTarget == null) {
                 return; // should not be here ... "false" attack animation
             }

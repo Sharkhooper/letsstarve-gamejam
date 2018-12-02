@@ -49,7 +49,13 @@ public class CharacterActor : MonoBehaviour {
 
 	private Vector3 lastPos;
 
-	public Vector3 Forward => Quaternion.Euler(0, -Theta, 0) * Vector3.right;
+	public Vector3 Forward {
+		get => Quaternion.Euler(0, -Theta, 0) * Vector3.right;
+		set {
+			var forward = value.normalized;
+			Theta = -Vector3.SignedAngle(Vector3.right, forward, Vector3.up);		
+		}
+	}
 
 	private void Update() {
 		int animationState = Mathf.FloorToInt((Theta + 405.0f) / 90.0f) - 4;
