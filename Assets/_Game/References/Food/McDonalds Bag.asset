@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: b466f43cc4728b5478dc87f7c3e98e29, type: 3}
-  m_Name: SnailFood
+  m_Name: McDonalds Bag
   m_EditorClassIdentifier: 
-  value: 30
+  value: 50
+  graphic: {fileID: 21300000, guid: eb23e9e56b3480d47a29081f9948056c, type: 3}

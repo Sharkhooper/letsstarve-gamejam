@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: b466f43cc4728b5478dc87f7c3e98e29, type: 3}
-  m_Name: MoldyCroissantFood
+  m_Name: Students Heart
   m_EditorClassIdentifier: 
-  value: 30
+  value: 100
+  graphic: {fileID: 21300000, guid: c5f1963590f432f4cbd3b0c46d6ff089, type: 3}
